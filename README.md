@@ -82,4 +82,13 @@ Window       | Panel               | bootstrap
 ### Windows
 ```xml
 <window mold="bootstrap" title="BS Window" />
+
+#Maven
+
+```xml
+<dependency>
+	<groupId>org.sinnlabs.ui</groupId>
+	<artifactId>zk-bootstrap-ext</artifactId>
+	<version>0.0.2</version>
+</dependency>
 ```
