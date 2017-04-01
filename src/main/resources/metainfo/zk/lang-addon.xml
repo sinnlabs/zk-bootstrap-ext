@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language-addon>
+
+	<addon-name>zk-bootstrap-ext</addon-name>
+	<language-name>xul/html</language-name>
+	<depends>zkbind,zkex,zkmax</depends>
+	
+	<version>
+		<version-class>org.sinnlabs.ui.zk.bootstrap.Version</version-class>
+		<version-uid>0.0.1-SNAPSHOT</version-uid>
+		<zk-version>7.0.0</zk-version><!-- or later -->
+	</version>
+	
+	<javascript package="bootstrap"/>
+	
+	<javascript src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"/>
+	
+	<stylesheet href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" type="text/css"/>
+	
+	<component>
+		<component-name>button</component-name>
+		<extends>button</extends>
+		<mold>
+			<mold-name>bootstrap</mold-name>
+		</mold>
+	</component>
+	
+	<component>
+		<component-name>window</component-name>
+		<extends>window</extends>
+		<mold>
+			<mold-name>bootstrap</mold-name>
+		</mold>
+	</component>
+	
+	<component>
+		<component-name>panel</component-name>
+		<extends>panel</extends>
+		<mold>
+			<mold-name>bootstrap</mold-name>
+		</mold>
+	</component>
+	
+	<component>
+		<component-name>menupopup</component-name>
+		<extends>menupopup</extends>
+		<mold>
+			<mold-name>bootstrap</mold-name>
+		</mold>
+	</component>
+	
+	<component>
+		<component-name>paging</component-name>
+		<extends>paging</extends>
+		<mold>
+			<mold-name>bootstrap</mold-name>
+		</mold>
+	</component>
+	
+</language-addon>

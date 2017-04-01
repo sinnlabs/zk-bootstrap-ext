@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<config-name>zk-bootstrap-ext</config-name><!-- used to resolve dependency -->
+	<!-- <depends>zk</depends> -->
+
+	<version>
+		<version-class>org.sinnlabs.ui.zk.bootstrap.Version</version-class>
+		<version-uid>0.0.1-SNAPSHOT</version-uid>
+	</version>
+
+	<!-- <listener> <listener-class>org.sinnlabs.ui.zk.bootstrap.</listener-class> 
+		</listener> <library-property> <name></name> <value>org.sinnlabs.ui.zk.bootstrap.</value> 
+		</library-property> -->
+</zk>
