@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.sinnlabs.ui</groupId>
 	<artifactId>zk-bootstrap-ext</artifactId>
@@ -13,17 +14,15 @@
 	<packaging>jar</packaging>
 	<name>The zk-bootstrap-ext library</name>
 	<description>Integration of bootstap for ZK 7 Framework</description>
-	<scm>
-		<url>https://github.com/sinnlabs/zk-bootstrap-ext</url>
-	</scm>
+
 	<developers>
-        <developer>
-            <id>owner</id>
-            <name>Peter Liverovsky</name>
-            <email>nsa-azon@yandex.ru</email>
-            <timezone>UTC+3</timezone>
-        </developer>
-    </developers>
+		<developer>
+			<id>owner</id>
+			<name>Peter Liverovsky</name>
+			<email>nsa-azon@yandex.ru</email>
+			<timezone>UTC+3</timezone>
+		</developer>
+	</developers>
 	<licenses>
 		<license>
 			<name>GNU Lesser General Public License, Version 2.1</name>
@@ -31,6 +30,27 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+	<organization>
+		<name>SinnLabs</name>
+		<url>https://github.com/sinnlabs</url>
+	</organization>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<name>snapshots</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<name>releases</name>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+    	<artifactId>oss-parent</artifactId>
+    	<version>9</version>
+	</parent>
 	<repositories>
 		<repository>
 			<id>ZK CE</id>
@@ -39,11 +59,16 @@
 		</repository>
 		<repository>
 			<id>ZK EVAL</id>
-      		<name>ZK Evaluation Repository</name>
+			<name>ZK Evaluation Repository</name>
 			<url>http://mavensync.zkoss.org/eval</url>
 		</repository>
 	</repositories>
 	<pluginRepositories>
+		<pluginRepository>
+			<id>mavenplugins</id>
+			<name>Maven Plugin Repository</name>
+			<url>https://repo.maven.apache.org/maven2/</url>
+		</pluginRepository>
 		<pluginRepository>
 			<id>zkmaven</id>
 			<name>ZK Maven Plugin Repository</name>
@@ -81,31 +106,51 @@
 			<version>2.4</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>${commons-io}</version>
 		</dependency>
-		
+
 		<dependency>
-    		<groupId>org.webjars</groupId>
-    		<artifactId>bootstrap</artifactId>
-    		<version>3.3.7-1</version>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>3.3.7-1</version>
 		</dependency>
-		
-		<!-- ZK 5 breeze theme
-		<dependency>
-			<groupId>org.zkoss.theme</groupId>
-			<artifactId>breeze</artifactId>
-			<version>${zk.version}</version>
-			<optional>true</optional>
-		</dependency>
-		 -->
+
+		<!-- ZK 5 breeze theme <dependency> <groupId>org.zkoss.theme</groupId> 
+			<artifactId>breeze</artifactId> <version>${zk.version}</version> <optional>true</optional> 
+			</dependency> -->
 	</dependencies>
 	<build>
 		<testOutputDirectory>${project.build.directory}/classes</testOutputDirectory>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.2</version>
+				<extensions>true</extensions>
+			</plugin>
+			<!-- <plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.6.7</version>
+				<executions>
+					<execution>
+						<id>default-deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<serverId>ossrh</serverId>
+					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+					<autoReleaseAfterClose>false</autoReleaseAfterClose>
+				</configuration>
+			</plugin>  -->
 			<!-- Run with Jetty -->
 			<plugin>
 				<groupId>org.mortbay.jetty</groupId>
@@ -254,6 +299,38 @@
 								<descriptor>src/main/assembly/bundle.xml</descriptor>
 							</descriptors>
 						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+				<configuration>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.scm</groupId>
+						<artifactId>maven-scm-provider-gitexe</artifactId>
+						<version>1.8.1</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.6</version>
+				<configuration>
+					<passphrase>${gpg.passphrase}</passphrase>
+				</configuration>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
 					</execution>
 				</executions>
 			</plugin>
