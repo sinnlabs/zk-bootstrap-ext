@@ -34,6 +34,12 @@
 		<name>SinnLabs</name>
 		<url>https://github.com/sinnlabs</url>
 	</organization>
+	
+	<scm>
+		<url>https://github.com/sinnlabs/zk-bootstrap-ext/tags/org.sinnlabs.ui.zk-bootstrap-ext-0.0.2</url>
+		<connection>scm:git:git://github.com/sinnlabs/zk-bootstrap-ext/tags/org.sinnlabs.ui.zk-bootstrap-ext-0.0.2</connection>
+	</scm>
+	
 	<distributionManagement>
 		<snapshotRepository>
 			<id>ossrh</id>
