@@ -82,6 +82,7 @@ Window       | Panel               | bootstrap
 ### Windows
 ```xml
 <window mold="bootstrap" title="BS Window" />
+```
 
 #Maven
 
