@@ -5,7 +5,7 @@
 
 	<version>
 		<version-class>org.sinnlabs.ui.zk.bootstrap.Version</version-class>
-		<version-uid>0.0.1-SNAPSHOT</version-uid>
+		<version-uid>0.0.2-SNAPSHOT</version-uid>
 	</version>
 
 	<!-- <listener> <listener-class>org.sinnlabs.ui.zk.bootstrap.</listener-class> 
