@@ -80,11 +80,14 @@ Window       | Panel               | bootstrap
 ```
 
 ### Windows
+
 ```xml
 <window mold="bootstrap" title="BS Window" />
 ```
 
-#Maven
+## Maven
+
+Add the following block to the dependencies
 
 ```xml
 <dependency>
