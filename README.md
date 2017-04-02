@@ -3,6 +3,8 @@ Integration of twitter bootstrap for ZK CE 7 framework
 
 This project is a ZK addon to provide a set of molds for [Twitter bootstrap v3](http://getbootstrap.com/) and developer can apply this addon to combine ZK with Bootstrap styling seamlessly.</br>
 
+
+
 ## Component mapping
 
 ZK Component | Bootstrap component | Mold name
@@ -14,6 +16,10 @@ Paging       | Pagination          | bootstrap
 Window       | Panel               | bootstrap
 
 ## Usage
+
+### Installation
+
+Download the jar file from the Github, or use the maven instalation
 
 ### Button
 ```xml
