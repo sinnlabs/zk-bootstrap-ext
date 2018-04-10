@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.sinnlabs.ui</groupId>
 	<artifactId>zk-bootstrap-ext</artifactId>
@@ -143,7 +144,7 @@
 				<configuration> <serverId>ossrh</serverId> <nexusUrl>https://oss.sonatype.org/</nexusUrl> 
 				<autoReleaseAfterClose>false</autoReleaseAfterClose> </configuration> </plugin> -->
 			<!-- Run with Jetty -->
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.mortbay.jetty</groupId>
 				<artifactId>maven-jetty-plugin</artifactId>
 				<version>6.1.10</version>
@@ -174,7 +175,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin>  -->
 			<!-- Compile java -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -306,7 +307,7 @@
 						<artifactId>maven-scm-provider-gitexe</artifactId>
 						<version>1.9.5</version>
 					</dependency>
-					
+
 				</dependencies>
 			</plugin>
 			<plugin>

@@ -57,4 +57,14 @@
 		</mold>
 	</component>
 	
+	<component>
+		<component-name>bslabel</component-name>
+		<component-class>org.sinnlabs.ui.zk.bootstrap.Bslabel</component-class>
+		<widget-class>bootstrap.Bslabel</widget-class>
+		<mold>
+			<mold-name>default</mold-name>
+			<mold-uri>labelmold.js</mold-uri>
+		</mold>
+	</component>
+	
 </language-addon>

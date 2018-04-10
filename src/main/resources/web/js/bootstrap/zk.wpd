@@ -4,4 +4,5 @@
 	<script src="panel.js"/>
 	<script src="menupopup.js"/>
 	<script src="paging.js"/>
+	<widget name="Bslabel" />
 </package>
