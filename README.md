@@ -99,6 +99,6 @@ Add the following block to the dependencies
 <dependency>
 	<groupId>org.sinnlabs.ui</groupId>
 	<artifactId>zk-bootstrap-ext</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 </dependency>
 ```
