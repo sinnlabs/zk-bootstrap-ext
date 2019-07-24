@@ -99,7 +99,7 @@ Add the following block to the dependencies
 <dependency>
 	<groupId>org.sinnlabs.ui</groupId>
 	<artifactId>zk-bootstrap-ext</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.4</version>
 </dependency>
 ```
 
@@ -110,5 +110,9 @@ Bootstrap extension provides filtered bootstrap popup menu
 ```xml
 <searchmenu id="menu" placeHolder="Search..." minCountItems="10" ><menuitem /> <menuitem /></searchmenu>
 ```
+#### Properties
+minCountItems - Minimum count of items to display filter. Default 10
+placeHolder - Search bar placeholder. Default: Search...
+
 Example:
 ![alt search menu example](https://github.com/sinnlabs/zk-bootstrap-ext/blob/master/zkdoc/Searchmenu.PNG?raw=true)
