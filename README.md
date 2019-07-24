@@ -102,3 +102,13 @@ Add the following block to the dependencies
 	<version>0.0.3</version>
 </dependency>
 ```
+
+## Searchmenu component
+
+Bootstrap extension provides filtered bootstrap popup menu
+
+```xml
+<searchmenu id="menu" placeHolder="Search..." minCountItems="10" ><menuitem /> <menuitem /></searchmenu>
+```
+Example:
+![alt search menu example](https://github.com/sinnlabs/zk-bootstrap-ext/blob/master/zkdoc/Searchmenu.PNG?raw=true)
