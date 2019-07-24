@@ -1,8 +1,4 @@
-<package name="bootstrap" language="xul/html">
-	<script src="button.js"/>
-	<script src="window.js"/>
-	<script src="panel.js"/>
-	<script src="menupopup.js"/>
-	<script src="paging.js"/>
+<package name="bootstrap" language="xul/html" depends="zul.menu, zul.wgt">
 	<widget name="Bslabel" />
+	<widget name="Searchmenu" />
 </package>

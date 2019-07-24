@@ -7,9 +7,15 @@
 	
 	<version>
 		<version-class>org.sinnlabs.ui.zk.bootstrap.Version</version-class>
-		<version-uid>0.0.2-SNAPSHOT</version-uid>
+		<version-uid>0.0.4</version-uid>
 		<zk-version>7.0.0</zk-version><!-- or later -->
 	</version>
+	
+	<javascript src="~./js/bootstrap/button.js"/>
+	<javascript src="~./js/bootstrap/menupopup.js"/>
+	<javascript src="~./js/bootstrap/paging.js"/>
+	<javascript src="~./js/bootstrap/panel.js"/>
+	<javascript src="~./js/bootstrap/window.js"/>
 	
 	<javascript package="bootstrap"/>
 	
@@ -64,6 +70,22 @@
 		<mold>
 			<mold-name>default</mold-name>
 			<mold-uri>labelmold.js</mold-uri>
+		</mold>
+	</component>
+	
+	<component>
+		<component-name>searchmenu</component-name>
+		<component-class>org.sinnlabs.ui.zk.bootstrap.Searchmenu</component-class>
+		<widget-class>bootstrap.Searchmenu</widget-class>
+		<mold>
+			<mold-name>default</mold-name>
+			<mold-uri>mold/searchmenu.js</mold-uri>
+			<css-uri>css/searchmenu.css</css-uri>
+		</mold>
+		<mold>
+			<mold-name>bootstrap</mold-name>
+			<mold-uri>mold/searchmenu.js</mold-uri>
+			<css-uri>css/searchmenu.css</css-uri>
 		</mold>
 	</component>
 	
