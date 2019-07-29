@@ -7,7 +7,7 @@
 	
 	<version>
 		<version-class>org.sinnlabs.ui.zk.bootstrap.Version</version-class>
-		<version-uid>0.0.5</version-uid>
+		<version-uid>0.0.6-SNAPSHOT</version-uid>
 		<zk-version>7.0.0</zk-version><!-- or later -->
 	</version>
 	
