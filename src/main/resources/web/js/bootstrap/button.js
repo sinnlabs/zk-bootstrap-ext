@@ -16,7 +16,7 @@ zk.override(zul.wgt.Button.prototype, _button, {
 	},
 	getSclass: function () {
 		if (this._inBSMold()) {
-			return this._sclass ? this._sclass : 'btn-default';
+			return this._sclass ? this._sclass : 'btn-outline-secondary';
 		} else
 			return _button.getSclass.apply(this, arguments);
 	},

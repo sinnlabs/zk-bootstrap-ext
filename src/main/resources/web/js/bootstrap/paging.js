@@ -28,12 +28,12 @@ zk.override(zul.mesh.Paging.prototype, _paging, {
 	},
 	appendAnchor: function (out, label, val, seld) {
 		if (this._inBSMold()) {
-			var cls = '';
+			var cls = 'page-item';
 			
 			if (seld)
 				cls += ' ' + this.$s('selected');
 			
-			out.push('<li class="', cls,'"><a href="javascript:;" onclick="zul.mesh.Paging.go(this,', val,
+			out.push('<li class="', cls,'"><a class="page-link" href="javascript:;" onclick="zul.mesh.Paging.go(this,', val,
 					')">', label, '</a></li>');
 		} else {
 			return _paging.appendAnchor.apply(this, arguments);

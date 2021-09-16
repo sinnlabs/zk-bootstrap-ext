@@ -7,7 +7,7 @@
 	
 	<version>
 		<version-class>org.sinnlabs.ui.zk.bootstrap.Version</version-class>
-		<version-uid>0.0.6-SNAPSHOT</version-uid>
+		<version-uid>0.1.1-SNAPSHOT</version-uid>
 		<zk-version>7.0.0</zk-version><!-- or later -->
 	</version>
 	
@@ -16,12 +16,15 @@
 	<javascript src="~./js/bootstrap/paging.js"/>
 	<javascript src="~./js/bootstrap/panel.js"/>
 	<javascript src="~./js/bootstrap/window.js"/>
+	<javascript src="~./js/bootstrap/datebox.js"/>
 	
 	<javascript package="bootstrap"/>
 	
-	<javascript src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"/>
+	<javascript src="/webjars/bootstrap/5.1.0/js/bootstrap.min.js"/>
 	
-	<stylesheet href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" type="text/css"/>
+	<stylesheet href="/webjars/bootstrap/5.1.0/css/bootstrap.min.css" type="text/css"/>
+	<stylesheet href="/webjars/bootstrap-icons/1.5.0/font/bootstrap-icons.css" type="text/css"/>
+	<stylesheet href="~./js/bootstrap/css/zk-bootstrap.css" type="text/css"/>
 	
 	<component>
 		<component-name>button</component-name>
@@ -70,6 +73,15 @@
 		<mold>
 			<mold-name>default</mold-name>
 			<mold-uri>labelmold.js</mold-uri>
+			<css-uri>css/bslabel.css</css-uri>
+		</mold>
+	</component>
+	
+	<component>
+		<component-name>datebox</component-name>
+		<extends>datebox</extends>
+		<mold>
+			<mold-name>bootstrap</mold-name>
 		</mold>
 	</component>
 	

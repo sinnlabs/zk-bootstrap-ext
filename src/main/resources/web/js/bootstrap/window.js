@@ -50,7 +50,7 @@ zk.afterLoad('zul.wnd', function () {
 		}
 		
 		// render content
-		out.push('<div id="', uuid, '-cave" class="panel-body ');
+		out.push('<div id="', uuid, '-cave" class="card-body ');
 		
 		if (contentSclass)
 			out.push(contentSclass, ' ');
@@ -79,16 +79,16 @@ zk.afterLoad('zul.wnd', function () {
 		},
 		getSclass: function () {
 			if (this._inBSMold()) {
-				return this._sclass ? this._sclass : 'panel-default';
+				return this._sclass ? this._sclass : '';
 			} else
 				return _window.getSclass.apply(this, arguments);
 		},
 		$s : function (zsub) {
 			if (this._inBSMold()) {
 				if (zsub == "header")
-					return "panel-heading";
+					return "card-header";
 				else if (zsub == "content")
-					return "panel-body";
+					return "card-body";
 				else
 					return _window.$s.apply(this, arguments);
 			} else
@@ -96,7 +96,7 @@ zk.afterLoad('zul.wnd', function () {
 		},
 		domClass_ : function(no) {
 			if (this._inBSMold()) {
-				var cls = "panel";
+				var cls = "card";
 				cls += ' ' + this.getSclass();
 				cls += ' ' + this.$s(this._mode);
 				return cls;

@@ -47,7 +47,7 @@ zk.override(zul.menu.Menuseparator.prototype, _menuseparator, {
 	},
 	getZclass: function () {
 		if (this._inBSMold())
-			return this._zclass != null ? this._zclass : 'divider';
+			return this._zclass != null ? this._zclass : 'dropdown-divider';
 		return _menuseparator.getZclass.apply(this, arguments);
 	}
 });
@@ -60,8 +60,18 @@ zk.override(zul.menu.Menuitem.prototype, _menuitem, {
 	},
 	getZclass: function () {
 		if (this._inBSMold())
-			return this._zclass != null ? this._zclass : '';
+			return this._zclass != null ? this._zclass : 'dropdown';
 		return _menuitem.getZclass.apply(this, arguments);
+	},
+	$s: function (subclass) {
+		if (this._inBSMold()) {
+			switch (subclass) {
+			case 'content':
+				return 'dropdown-item';
+			}
+			return '';
+		} else
+			return _menuitem.$s.apply(this, arguments);
 	}
 });
 

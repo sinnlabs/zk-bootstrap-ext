@@ -1,12 +1,16 @@
 # zk-bootstrap-ext
 Integration of twitter bootstrap for ZK CE 7 framework
 
-This project is a ZK addon to provide a set of molds for [Twitter bootstrap v3](http://getbootstrap.com/) and developer can apply this addon to combine ZK with Bootstrap styling seamlessly.</br>
+This project is a ZK addon to provide a set of molds for [Twitter bootstrap v3](https://getbootstrap.com/docs/3.3/) or [Twitter bootstrap v5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) and developer can apply this addon to combine ZK with Bootstrap styling seamlessly.</br>
+
+For bootstrap v3 use zk-bootstrap-ext version 0.0.5
+If you use bootstrap v5 use zk-bootstrap-ext version 0.1.1
 
 
 
 ## Component mapping
 
+#### Bootstrap v3.3.7
 ZK Component | Bootstrap component | Mold name
 ------------ | ------------------- | ----------
 Button       | Button              | bootstrap
@@ -15,6 +19,26 @@ Panel        | Panel               | bootstrap
 Paging       | Pagination          | bootstrap
 Window       | Panel               | bootstrap
 
+#### Bootstrap v5.1.0
+ZK Component | Bootstrap component | Mold name
+------------ | ------------------- | ----------
+Button       | Button              | bootstrap
+Menupopup    | Dropdown Menu       | bootstrap
+Panel        | Panel               | bootstrap
+Paging       | Pagination          | bootstrap
+Window       | Panel               | bootstrap
+Datebox      | Input group         | bootstrap
+
+##### Additional styles
+Added bs-text class for bootstrap v5 to decorate text in bootstrap v5 style. This class may be useful for zk labels combines with alerts, example
+
+```xml
+	<div class="alert alert-primary">
+       <label sclass="bs-text" value="A simple primary alert with"/> <a href="#" class="bs-text alert-link">an example link</a>
+       <label sclass="bs-text" value=". Give it a click if you like."/>
+	</div>
+```
+
 ## Usage
 
 ### Installation
@@ -22,6 +46,20 @@ Window       | Panel               | bootstrap
 Download the jar file from the Github, or use the maven instalation
 
 ### Button
+
+#### Bootstrap v3.3.7
+```xml
+<button mold="bootstrap">Default</button>
+<button mold="bootstrap" sclass="btn-primary">Primary</button>
+<button mold="bootstrap" sclass="btn-success">Success</button>
+<button mold="bootstrap" sclass="btn-info">Info</button>
+<button mold="bootstrap" sclass="btn-warning">Warning</button>
+<button mold="bootstrap" sclass="btn-danger">Danger</button>
+```
+
+####Bootstrap v5.1.0
+For bootstrp v5 default sclass is ``btn-outline-secondary``
+
 ```xml
 <button mold="bootstrap">Default</button>
 <button mold="bootstrap" sclass="btn-primary">Primary</button>
@@ -33,6 +71,7 @@ Download the jar file from the Github, or use the maven instalation
 
 ### Input groups
 
+#### Bootstrap v3.3.7
 ```xml
 <div class="input-group">
 	<span class="input-group-addon">@</span>
@@ -51,6 +90,14 @@ Download the jar file from the Github, or use the maven instalation
 </div>
 ```
 
+#### Bootstrap v5.1.0
+```xml
+<div class="input-group">
+	<span class="input-group-text">@</span>
+	<textbox class="form-control" placeholder="Username" />
+</div>
+```
+
 ### Pagination
 
 ```xml
@@ -58,6 +105,8 @@ Download the jar file from the Github, or use the maven instalation
 ```
 
 ### Panels
+
+#### Bootstrap v3.3.7
 
 ```xml
 <panel mold="bootstrap" title="Panel Default">
@@ -85,6 +134,34 @@ Download the jar file from the Github, or use the maven instalation
 </panel>
 ```
 
+#### Bootstrap v5
+
+```xml
+<panel mold="bootstrap" title="Panel Default">
+	<panelchildren>Panel content</panelchildren>
+</panel>
+
+<panel mold="bootstrap" title="Panel Primary" sclass="text-white bg-primary">
+	<panelchildren>Panel content</panelchildren>
+</panel>
+
+<panel mold="bootstrap" title="Panel Success" sclass="text-white bg-success">
+	<panelchildren>Panel content</panelchildren>
+</panel>
+
+<panel mold="bootstrap" title="Panel Info" sclass="text-dark bg-info">
+	<panelchildren>Panel content</panelchildren>
+</panel>
+
+<panel mold="bootstrap" title="Panel Warning" sclass="text-dark bg-warning">
+	<panelchildren>Panel content</panelchildren>
+</panel>
+
+<panel mold="bootstrap" title="Panel Danger" sclass="text-white bg-danger">
+	<panelchildren>Panel content</panelchildren>
+</panel>
+```
+
 ### Windows
 
 ```xml
@@ -95,11 +172,23 @@ Download the jar file from the Github, or use the maven instalation
 
 Add the following block to the dependencies
 
+#### Bootsrap v3.3.7
+
 ```xml
 <dependency>
 	<groupId>org.sinnlabs.ui</groupId>
 	<artifactId>zk-bootstrap-ext</artifactId>
 	<version>0.0.5</version>
+</dependency>
+```
+
+#### Bootstrap v5.1.0
+
+```xml
+<dependency>
+	<groupId>org.sinnlabs.ui</groupId>
+	<artifactId>zk-bootstrap-ext</artifactId>
+	<version>0.1.1</version>
 </dependency>
 ```
 

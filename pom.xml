@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.sinnlabs.ui</groupId>
 	<artifactId>zk-bootstrap-ext</artifactId>
-	<version>0.0.6-SNAPSHOT</version>
+	<version>0.1.1-SNAPSHOT</version>
 	<properties>
 		<zk.version>7.0.3</zk.version>
 		<commons-io>1.3.1</commons-io>
@@ -122,9 +123,13 @@
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>bootstrap</artifactId>
-			<version>3.3.7-1</version>
+			<version>5.1.0</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.webjars.npm</groupId>
+			<artifactId>bootstrap-icons</artifactId>
+			<version>1.5.0</version>
+		</dependency>
 		<!-- ZK 5 breeze theme <dependency> <groupId>org.zkoss.theme</groupId> 
 			<artifactId>breeze</artifactId> <version>${zk.version}</version> <optional>true</optional> 
 			</dependency> -->
@@ -176,6 +181,55 @@
 					</execution>
 				</executions>
 			</plugin>  -->
+			<!-- Unpack dependencies with jetty run -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>unpack</id>
+						<phase>generate-test-sources</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>org.webjars</groupId>
+									<artifactId>bootstrap</artifactId>
+									<version>5.1.0</version>
+									<type>jar</type>
+									<includes>META-INF/resources/webjars/**/*</includes>
+									<excludes>META-INF/resources/webjars/**/*index.html</excludes>
+									<outputDirectory>${basedir}/src/test/webapp</outputDirectory>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/${project.artifactId}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.build.directory}/META-INF/resources/webjars/bootstrap/5.1.0</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 			<!-- Compile java -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -246,36 +300,6 @@
 						<configuration>
 							<descriptors>
 								<descriptor>src/main/assembly/javadoc.xml</descriptor>
-							</descriptors>
-						</configuration>
-					</execution>
-					<!-- Build bin.zip -->
-					<execution>
-						<id>bin</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<finalName>${project.artifactId}-bin${packname}</finalName>
-							<appendAssemblyId>false</appendAssemblyId>
-							<descriptors>
-								<descriptor>src/main/assembly/bin.xml</descriptor>
-							</descriptors>
-						</configuration>
-					</execution>
-					<!-- Build src.zip -->
-					<execution>
-						<id>src</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<finalName>${project.artifactId}-src${packname}</finalName>
-							<appendAssemblyId>false</appendAssemblyId>
-							<descriptors>
-								<descriptor>src/main/assembly/src.xml</descriptor>
 							</descriptors>
 						</configuration>
 					</execution>

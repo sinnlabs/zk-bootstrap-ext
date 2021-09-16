@@ -13,23 +13,25 @@ zk.override(zul.wnd.Panel.prototype, _panel, {
 	},
 	getSclass: function () {
 		if (this._inBSMold()) {
-			return this._sclass ? this._sclass : 'panel-default';
+			return this._sclass ? this._sclass : '';
 		} else
 			return _panel.getSclass.apply(this, arguments);
 	},
 	getZclass: function () {
 		if (this._inBSMold())
-			return this._zclass != null ? this._zclass : 'panel';
+			return this._zclass != null ? this._zclass : 'card';
 		return _panel.getZclass.apply(this, arguments);
 	},
 	$s: function (subclass) {
 		if (this._inBSMold()) {
 			switch (subclass) {
 			case 'head':
-				subclass = 'heading';
+				subclass = 'header';
 				break;
 			case 'header':
 				return '';
+			default:
+				return _panel.$s.apply(this, arguments);
 			}
 		}
 		return _panel.$s.apply(this, arguments);

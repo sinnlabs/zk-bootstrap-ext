@@ -2,4 +2,43 @@
 	<window title="Hello World!!" border="normal" width="300px"
 		apply="test.ctrl.DemoWindowComposer">
 	</window>
+	<window title="Bootstrap" mold="bootstrap" width="300px" closable="true">
+		internal text
+	</window>
+	<panel title="bootstrap panel" mold="bootstrap" border="normal">
+		<panelchildren>PanelContent</panelchildren>
+	</panel>
+	<paging mold="bootstrap" totalSize="100" pageSize="20"/>
+	<button mold="bootstrap" label="Label"/>
+	<button mold="bootstrap" sclass="btn-primary" label="Primary"/>
+	
+	<button mold="bootstrap" label="left click" popup="mp, type=toggle"/>
+	<menupopup mold="bootstrap" id="mp">
+		<menuitem label="menupopup"/>
+		<menuitem label="menupopup2"/>
+		<menuseparator />
+		<menuitem label="menupopup3"/>
+		
+	</menupopup>
+	<button mold="bootstrap" label="searchmenu click" popup="sp, type=toggle"/>
+	<searchmenu mold="bootstrap" id="sp" minItemCount="3">
+		<menuitem label="menupopup"/>
+		<menuitem label="menupopup2"/>
+		<menuseparator />
+		<menuitem label="menupopup3"/>
+		<menuitem label="menupopup4"/>
+	</searchmenu>
+	<datebox id="date" mold="bootstrap"/>
+	<datebox id="dater" readonly="true" mold="bootstrap"/>
+	<datebox id="dated" disabled="true" mold="bootstrap"/>
+	
+	<div id="group" zclass="form-group">
+		<bslabel id="label" value="CharacterField" sclass="form-label" forId="value" visible="true"/>
+		<textbox id="value" sclass="form-control"/>
+		<label id="help" visible="false" zclass="help-block">Test help block</label>
+	</div>
+	<div class="alert alert-primary">
+       <label sclass="bs-text" value="A simple primary alert with"/> <a href="#" class="bs-text alert-link">an example link</a>
+       <label sclass="bs-text" value=". Give it a click if you like."/>
+	</div>
 </zk>
