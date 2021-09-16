@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.sinnlabs.ui</groupId>
 	<artifactId>zk-bootstrap-ext</artifactId>
-	<version>0.1.1-SNAPSHOT</version>
+	<version>0.1.1</version>
 	<properties>
 		<zk.version>7.0.3</zk.version>
 		<commons-io>1.3.1</commons-io>
