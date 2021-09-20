@@ -41,4 +41,66 @@
        <label sclass="bs-text" value="A simple primary alert with"/> <a href="#" class="bs-text alert-link">an example link</a>
        <label sclass="bs-text" value=". Give it a click if you like."/>
 	</div>
+	<tabbox width="400px" id="tabs" orient="left" mold="default">
+		<tabs>
+			<tab label="Tab 1" />
+			<tab label="Tab 2" />
+		</tabs>
+		<tabpanels>
+			<tabpanel>This is panel 1</tabpanel>
+			<tabpanel>This is panel 2</tabpanel>
+		</tabpanels>
+	</tabbox>
+	<tabbox width="400px" id="tabs2" orient="left" mold="bootstrap">
+		<tabs>
+			<tab label="Tab 1" />
+			<tab label="Tab 2" />
+		</tabs>
+		<tabpanels>
+			<tabpanel>This is panel 1</tabpanel>
+			<tabpanel>This is panel 2</tabpanel>
+		</tabpanels>
+	</tabbox>
+	<tabbox width="400px" tabscroll="false" id="tabs3" orient="top" mold="bootstrap">
+		<tabs>
+			<tab label="Tab 1" />
+			<tab label="Tab 2" />
+			<tab label="Tab 2" />
+			<tab label="Tab 2" />
+			<tab label="Tab 2" />
+			<tab label="Tab 2" />
+			<tab label="Tab 2" />
+			<tab label="Tab 2" />
+		</tabs>
+		<tabpanels>
+			<tabpanel>This is panel 1</tabpanel>
+			<tabpanel>This is panel 2</tabpanel>
+			<tabpanel>This is panel 2</tabpanel>
+			<tabpanel>This is panel 2</tabpanel>
+			<tabpanel>This is panel 2</tabpanel>
+			<tabpanel>This is panel 2</tabpanel>
+			<tabpanel>This is panel 2</tabpanel>
+			<tabpanel>This is panel 2</tabpanel>
+		</tabpanels>
+	</tabbox>
+	<tabbox width="400px" id="tabs4" orient="right" mold="bootstrap">
+		<tabs>
+			<tab label="Tab 1" />
+			<tab label="Tab 2" />
+		</tabs>
+		<tabpanels>
+			<tabpanel>This is panel 1</tabpanel>
+			<tabpanel>This is panel 2</tabpanel>
+		</tabpanels>
+	</tabbox>
+	<tabbox width="400px" id="tabs5" orient="bottom" mold="bootstrap">
+		<tabs>
+			<tab label="Tab 1" />
+			<tab label="Tab 2" />
+		</tabs>
+		<tabpanels>
+			<tabpanel>This is panel 1</tabpanel>
+			<tabpanel>This is panel 2</tabpanel>
+		</tabpanels>
+	</tabbox>
 </zk>

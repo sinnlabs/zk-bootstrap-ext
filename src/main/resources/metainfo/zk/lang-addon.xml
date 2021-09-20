@@ -17,6 +17,7 @@
 	<javascript src="~./js/bootstrap/panel.js"/>
 	<javascript src="~./js/bootstrap/window.js"/>
 	<javascript src="~./js/bootstrap/datebox.js"/>
+	<javascript src="~./js/bootstrap/tabbox.js"/>
 	
 	<javascript package="bootstrap"/>
 	
@@ -80,6 +81,14 @@
 	<component>
 		<component-name>datebox</component-name>
 		<extends>datebox</extends>
+		<mold>
+			<mold-name>bootstrap</mold-name>
+		</mold>
+	</component>
+	
+	<component>
+		<component-name>tabbox</component-name>
+		<extends>tabbox</extends>
 		<mold>
 			<mold-name>bootstrap</mold-name>
 		</mold>
