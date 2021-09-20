@@ -1,5 +1,7 @@
 # zk-bootstrap-ext
-Integration of twitter bootstrap for ZK CE 7 framework
+Integration of twitter bootstrap for ZK CE 7 framework or higher.
+
+Tested ZK CE Framework versions: 7*, 8.0.2.2, 8.6.0.1, 9.0.0, 9.6.0.1
 
 This project is a ZK addon to provide a set of molds for [Twitter bootstrap v3](https://getbootstrap.com/docs/3.3/) or [Twitter bootstrap v5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) and developer can apply this addon to combine ZK with Bootstrap styling seamlessly.</br>
 
