@@ -24,9 +24,9 @@ ZK Component | Bootstrap component | Mold name
 ------------ | ------------------- | ----------
 Button       | Button              | bootstrap
 Menupopup    | Dropdown Menu       | bootstrap
-Panel        | Panel               | bootstrap
+Panel        | card                | bootstrap
 Paging       | Pagination          | bootstrap
-Window       | Panel               | bootstrap
+Window       | card                | bootstrap
 Datebox      | Input group         | bootstrap
 
 ##### Additional styles
