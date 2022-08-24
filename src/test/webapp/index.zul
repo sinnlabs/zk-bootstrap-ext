@@ -2,7 +2,10 @@
 	<window title="Hello World!!" border="normal" width="300px"
 		apply="test.ctrl.DemoWindowComposer">
 	</window>
-	<window title="Bootstrap" mold="bootstrap" width="300px" closable="true">
+	<window title="Bootstrap" mold="bootstrap" width="300px" closable="false">
+		internal text
+	</window>
+	<window title="Bootstrap" mold="bootstrap" sclass="text-white bg-primary" width="300px" closable="false">
 		internal text
 	</window>
 	<panel title="bootstrap panel" mold="bootstrap" border="normal">
@@ -41,6 +44,7 @@
        <label sclass="bs-text" value="A simple primary alert with"/> <a href="#" class="bs-text alert-link">an example link</a>
        <label sclass="bs-text" value=". Give it a click if you like."/>
 	</div>
+	<alert type="success" message="A success completed" />
 	<tabbox width="400px" id="tabs" orient="left" mold="default">
 		<tabs>
 			<tab label="Tab 1" />
@@ -103,4 +107,31 @@
 			<tabpanel>This is panel 2</tabpanel>
 		</tabpanels>
 	</tabbox>
+	
+	<grid>
+    <auxhead>
+        <auxheader label="H1'07" colspan="6"/>
+        <auxheader label="H2'07" colspan="6"/>
+    </auxhead>
+    <auxhead>
+        <auxheader label="Q1" colspan="3"/>
+        <auxheader label="Q2" colspan="3"/>
+        <auxheader label="Q3" colspan="3"/>
+        <auxheader label="Q4" colspan="3"/>
+    </auxhead>
+    <columns>
+        <column label="Jan"/><column label="Feb"/><column label="Mar"/>
+        <column label="Apr"/><column label="May"/><column label="Jun"/>
+        <column label="Jul"/><column label="Aug"/><column label="Sep"/>
+        <column label="Oct"/><column label="Nov"/><column label="Dec"/>
+    </columns>
+    <rows>
+        <row>
+        <label value="1,000"/><label value="1,100"/><label value="1,200"/>
+        <label value="1,300"/><label value="1,400"/><label value="1,500"/>
+        <label value="1,600"/><label value="1,700"/><label value="1,800"/>
+        <label value="1,900"/><label value="2,000"/><label value="2,100"/>
+        </row>
+    </rows>
+</grid>
 </zk>

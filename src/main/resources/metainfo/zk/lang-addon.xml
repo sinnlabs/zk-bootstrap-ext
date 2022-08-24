@@ -28,6 +28,12 @@
 	<stylesheet href="~./js/bootstrap/css/zk-bootstrap.css" type="text/css"/>
 	
 	<component>
+		<component-name>alert</component-name>
+		<extends>div</extends>
+		<component-class>org.sinnlabs.ui.zk.bootstrap.Alert</component-class>
+	</component>
+	
+	<component>
 		<component-name>button</component-name>
 		<extends>button</extends>
 		<mold>
