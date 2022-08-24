@@ -207,3 +207,19 @@ placeHolder - Search bar placeholder. Default: Search...
 
 Example:
 ![alt search menu example](https://github.com/sinnlabs/zk-bootstrap-ext/blob/master/zkdoc/Searchmenu.PNG?raw=true)
+
+## Menu component
+Provides ability to add Drop down menu to Searchmenu component
+```xml
+<searchmenu id="menu" >
+    <menuitem /> 
+    <menu label="DropDownLabel">
+        <searchmenu mold="bootstrap">
+            <menuitem />
+            <menuitem />
+        </searchmenu>
+    </menu>
+    <menuitem />
+</searchmenu>
+```
+Example:

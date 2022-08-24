@@ -16,3 +16,10 @@
 .z-searchmenu-input-group-addon {
 	width: auto;
 }
+
+.bs-menu-icon-right {
+	position: absolute;
+	right: 0;
+	font-size: 1.25rem;
+	margin-top: 0.15rem;
+}
