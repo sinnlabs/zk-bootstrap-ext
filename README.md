@@ -223,3 +223,4 @@ Provides ability to add Drop down menu to Searchmenu component
 </searchmenu>
 ```
 Example:
+![](https://github.com/MaggiDog/zk-bootstrap-ext/blob/menu_bootstrap/zkdoc/Menu.png?raw=true)
