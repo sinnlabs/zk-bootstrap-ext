@@ -75,4 +75,31 @@ zk.override(zul.menu.Menuitem.prototype, _menuitem, {
 	}
 });
 
+var _bsmenu = {}
+zk.override(zul.menu.Menu.prototype, _bsmenu, {
+		_inBSMold: function () {
+			return this.parent && this.parent._inBSMold && this.parent._inBSMold();
+		},
+		getZclass: function () {
+			if (this._inBSMold()) {
+				return this._zclass ? this._zclass : '';
+			} else
+				return _bsmenu.getZclass.apply(this, arguments);
+		},
+		$s: function (subclass) {
+			if (this._inBSMold()) {
+				switch (subclass) {
+					case 'content':
+						return 'dropdown-item menu-content';
+					case 'separator':
+						return 'z-menu-separator';
+					case 'icon':
+						return 'bs-menu-icon-right';
+				}
+				return '';
+			} else
+				return _bsmenu.$s.apply(this, arguments);
+		}
+	});
+
 });
