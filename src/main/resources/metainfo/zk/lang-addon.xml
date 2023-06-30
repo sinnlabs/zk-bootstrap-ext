@@ -21,7 +21,7 @@
 	
 	<javascript package="bootstrap"/>
 	
-	<javascript src="/webjars/bootstrap/5.1.0/js/bootstrap.min.js"/>
+	<javascript src="/webjars/bootstrap/5.1.0/js/bootstrap.bundle.min.js"/>
 	
 	<stylesheet href="/webjars/bootstrap/5.1.0/css/bootstrap.min.css" type="text/css"/>
 	<stylesheet href="/webjars/bootstrap-icons/1.5.0/font/bootstrap-icons.css" type="text/css"/>
