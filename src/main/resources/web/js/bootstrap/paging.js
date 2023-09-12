@@ -45,6 +45,12 @@ zk.override(zul.mesh.Paging.prototype, _paging, {
 				return 'active';
 		}
 		return _paging.$s.apply(this, arguments);
+	},
+	_updatePageNum: function () { //FIX ZK Framework not update OS mold on totalSize changed
+		_paging._updatePageNum.apply(this, arguments);
+		console.log('PAGENUM Updated');
+		if (this._inBSMold()) // Update inner HTML Manually
+			if (this.desktop) this.$n().innerHTML = this._innerTags();
 	}
 });
 });
