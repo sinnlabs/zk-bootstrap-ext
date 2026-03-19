@@ -7,7 +7,7 @@
 	
 	<version>
 		<version-class>org.sinnlabs.ui.zk.bootstrap.Version</version-class>
-		<version-uid>0.1.2-SNAPSHOT</version-uid>
+		<version-uid>0.1.3-SNAPSHOT</version-uid>
 		<zk-version>7.0.0</zk-version><!-- or later -->
 	</version>
 	
@@ -39,6 +39,7 @@
 		<mold>
 			<mold-name>bootstrap</mold-name>
 		</mold>
+		<component-class>org.sinnlabs.ui.zk.bootstrap.BsButton</component-class>
 	</component>
 	
 	<component>

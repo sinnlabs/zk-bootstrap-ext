@@ -31,6 +31,7 @@
 		<menuitem label="menupopup3"/>
 		<menuitem label="menupopup4"/>
 	</searchmenu>
+	<button mold="bootstrap" label="Badge example" badge="100" badgeClass="bg-primary"/>
 	<datebox id="date" mold="bootstrap"/>
 	<datebox id="dater" readonly="true" mold="bootstrap"/>
 	<datebox id="dated" disabled="true" mold="bootstrap"/>
